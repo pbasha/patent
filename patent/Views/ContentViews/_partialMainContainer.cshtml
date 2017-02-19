@@ -1,0 +1,40 @@
+﻿@model string
+
+<div class="head_container"></div>
+<div class="horizontal_container">
+    <div id="right_content_container">
+        @{
+            @*if (Model != null)
+            {
+                @Html.Partial("~/Views/Shared/_partialWriteStringView.cshtml",
+                   String.Format("Wellcome, {0}", @Model));
+            }
+            else
+            {
+                @Html.Partial("~/Views/ContentViews/_partialNeedAuthView.cshtml");
+            }*@
+        }
+    </div>
+    <div id="left_menu_container">
+
+        <div class="well well-sm menuItem my-string string-btn">
+            @Ajax.ActionLink("Login", "Login", "Account",
+               new AjaxOptions()
+               {
+                   UpdateTargetId = "main_container",
+               })
+        </div>
+
+        <div class="well well-sm menuItem my-string string-btn">
+            @Ajax.ActionLink("Register", "Register", "Account",
+                new AjaxOptions()
+                {
+                    UpdateTargetId = "right_content_container",
+                })
+        </div>
+
+
+
+    </div>
+</div>
+

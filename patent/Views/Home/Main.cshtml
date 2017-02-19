@@ -1,0 +1,20 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Main";
+}
+
+@section Scripts
+{}
+
+
+@section Body
+{
+ <div id="main_container">
+
+     @Html.Partial("~/Views/ContentViews/_partialMainContainer.cshtml", @Model);
+     
+</div>
+   
+}
+
