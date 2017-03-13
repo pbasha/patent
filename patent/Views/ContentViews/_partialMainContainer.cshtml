@@ -21,7 +21,7 @@
             @Ajax.ActionLink("Login", "Login", "Account",
                new AjaxOptions()
                {
-                   UpdateTargetId = "main_container",
+                   UpdateTargetId = "right_content_container",
                })
         </div>
 
@@ -33,7 +33,13 @@
                 })
         </div>
 
-
+        <div class="well well-sm menuItem my-string string-btn">
+            @Ajax.ActionLink("Patents", "GetPatents", "Patents",
+                new AjaxOptions()
+                {
+                    UpdateTargetId = "right_content_container",
+                })
+        </div>
 
     </div>
 </div>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using patent.DAL.DataProvider;
 using System.Web.Mvc;
 
 namespace patent.Controllers
@@ -12,5 +9,20 @@ namespace patent.Controllers
         {
             return View("~/Views/Home/Main.cshtml", null);
         }
+
+        #region privite fields
+
+        private ServiceDBRepository repository;
+
+        #endregion
+
+        #region constructor
+
+        public HomeController()
+        {
+            repository = new ServiceDBRepository();
+        }
+
+        #endregion
     }
 }

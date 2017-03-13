@@ -1,0 +1,27 @@
+﻿@model IEnumerable<patent.DAL.EFModels.Patent>
+
+<div class="well well-lg my-well-container">
+    <div class="well">
+        <table class="table table-bordered active">
+            <thead>
+                <tr class="active">
+                    <th>Patent ID</th>
+                    <th>Patent Name</th>
+                    <th>Inventor Name</th>
+                    <th>Data creation</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var patentItem in Model)
+            {
+                    <tr class="active">
+                        <td>@patentItem.PatentID</td>
+                        <td>@patentItem.PatentName</td>
+                        <td>@patentItem.InventorName</td>
+                        <td>@patentItem.CreatingData</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

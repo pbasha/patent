@@ -57,8 +57,10 @@ namespace patent.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
+            //ViewBag.ReturnUrl = @"http://localhost:64275";
+            ViewBag.Title = "login";
+            //return View();
+            return PartialView(@"~\Views\Account\_partialLogin.cshtml");
         }
 
         //
@@ -139,7 +141,7 @@ namespace patent.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            return View(/*"~/Views/Account/_partialRegister.cshtml"*/);
         }
 
         //
